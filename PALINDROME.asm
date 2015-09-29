@@ -19,7 +19,7 @@ DISP	MACRO	msg
 		INT		21h
 		ENDM
 
-START:	MOV		ax,data
+START:		MOV		ax,data
 		MOV		ds,ax
 		MOV		es,ax
 
@@ -28,7 +28,7 @@ START:	MOV		ax,data
 		LEA		di,str2
 		MOV		ch,0
 		MOV		cl,len1
-RPT:	MOV		al,[si]
+RPT:		MOV		al,[si]
 		MOV		[di],al
 		DEC		si
 		INC		di
@@ -44,8 +44,8 @@ RPT:	MOV		al,[si]
 		DISP	msg1
 		JMP		FIN
 
-NOTPAL:	DISP	msg2
-FIN:	MOV		ah,4ch
+NOTPAL:		DISP	msg2
+FIN:		MOV		ah,4ch
 		INT		21h
 
 code	ends
