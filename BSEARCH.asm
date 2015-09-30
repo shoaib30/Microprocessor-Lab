@@ -54,4 +54,4 @@ DISP:   MOV     ah,9h
         INT     21h
 
 code ends
-    end starts
+    end start
