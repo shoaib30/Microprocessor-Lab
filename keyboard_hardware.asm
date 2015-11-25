@@ -21,6 +21,7 @@ START:  MOV     ax,data
 AGN:    MOV     bl,01h
         MOV     bh,3h
         MOV     ah,01
+        MOV     cl,00h
 
 NXTROW: MOV     dx,PC
         MOV     al,bl
