@@ -19,6 +19,7 @@ START:      MOV     ax,data
 RPT:        MOV     dx,PA
             LEA     si,sine
 
+            MOV     cx,36d
 NXT:        MOV     al,[si]
             OUT     dx,al
             INC     si

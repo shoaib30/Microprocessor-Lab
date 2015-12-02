@@ -18,13 +18,16 @@ START:      MOV     ax,data
 
 RPT:        MOV     dx,PA
             LEA     si,sine
+            MOV     cx,36d
 
-NXT:        MOV     al,128
+NXT:        MOV     al,128d
             ADD     al,[si]
+
             OUT     dx,al
             INC     si
             LOOP    NXT
 
+            MOV     cx,36d
             LEA     si,sine
 NXT1:       MOV     al,128
             SUB     al,[si]

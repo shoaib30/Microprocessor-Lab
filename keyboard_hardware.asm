@@ -13,8 +13,8 @@ data end
 code segment
 START:  MOV     ax,data
         MOV     ds,ax
-
         MOV     al,90h      ;for A i/p and B,C o/p
+
         MOV     dx,CR
         OUT     dx,al
 
@@ -67,3 +67,5 @@ DISP    PROC
         INT     21h
         RET
 DISP    ENDP
+CODE    ends
+        end     START
