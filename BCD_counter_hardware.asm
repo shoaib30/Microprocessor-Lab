@@ -19,11 +19,11 @@ start:  MOV     ax,data
         MOV     dx,PA
 NXT:    OUT     dx,al
         CALL    DELAY
-        INC     al
+        ADD     al,1
         DAA
         LOOP    NXT
-        MOV     cx,99h
-NXT1:   DEC     al
+        MOV     cx,99d
+NXT1:   SUB     al,1
         DAS
         OUT     dx,al
         CALL    DELAY
