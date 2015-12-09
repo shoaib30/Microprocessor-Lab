@@ -24,7 +24,7 @@ NUMM1:  CALL    INP
 OPR:    CALL    INP
         MOV     OP,al
         CALL    DELAY
-        CALL    DISP
+        ;CALL    DISP
         CMP     OP,11d
         JE      P1
         MOV     dl,'-'
@@ -43,7 +43,7 @@ NUM2:   CALL    INP
 SU:     MOV     al.NUM1
         SUB     al,NUM2
         JMP     PRIN
-AD:     MOV     al.NUM1
+AD:     MOV     al,NUM1
         ADD     al,NUM2
         JMP     PRIN
 PRIN:   PUSH    ax
