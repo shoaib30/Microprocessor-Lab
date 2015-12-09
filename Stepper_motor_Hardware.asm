@@ -6,8 +6,8 @@
 
 assume cs:code,ds:data
 data segment
-pa      EQU     20a0h
-cr      EQU     20a3h
+PA      EQU     20a0h
+CR      EQU     20a3h
 data ends
 
 code segment
@@ -15,17 +15,17 @@ START:  MOV     ax,data
         MOV     ds,ax
 
         MOV     al,80h
-        MOV     dx,cr
+        MOV     dx,CR
         OUT     dx,al
 
         MOV     cx,50d      ;1 step is 1.8deg
         MOV     al,11h
-        MOV     dx,pa
+        MOV     dx,PA
 
 RPT:    OUT     dx,al
         CALL    DELAY
         ROR     al,1        ;ROL will rotate in Anticlockwise dir
-        LOOP    rpt
+        LOOP    RPT
 
         MOV     ah,4ch
         INT     21h

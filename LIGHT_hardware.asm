@@ -12,9 +12,10 @@ code segment
 start:  MOV     ax,data
         MOV     ds,ax
 
-        MOV     dx,cr       ;initializing 8155
-        MOV     al,82h
+        MOV     dx,CR       ;initializing 8155
+        MOV     al,82h      ;Ports A,C o/p Port B i/p
         OUT     dx,al
+
         MOV     dx,PB
         IN      al,dx
         MOV     cx,8

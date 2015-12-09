@@ -1,4 +1,4 @@
-assume cd:code,ds:data
+assume cs:code,ds:data
 
 data segment
 sine        db      0,11,22,33,43,54,63,72,81,90,97,104,109,115,119
@@ -27,7 +27,7 @@ NXT:        MOV     al,128d
             LOOP    NXT
             MOV     cx,36d
             LEA     si,sine
-NXT1:       MOV     al,128
+NXT1:       MOV     al,128d
             SUB     al,[si]
             OUT     dx,al
             INC     si

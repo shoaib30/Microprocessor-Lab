@@ -10,8 +10,8 @@ data ends
 code segment
 start:  MOV     ax,data
         MOV     ds,ax
-        MOV     dx,cr       ;initializing 8155
-        MOV     al,80h
+        MOV     dx,CR       ;initializing 8155
+        MOV     al,80h      ;all ports for O/P
         OUT     dx,al
 
         MOV     cx,100d
