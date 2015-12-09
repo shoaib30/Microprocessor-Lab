@@ -11,7 +11,7 @@ code segment
 start:  MOV     ax,data
         MOV     ds,ax
         MOV     dx,cr       ;initializing 8155
-        MOV     al,82h
+        MOV     al,80h
         OUT     dx,al
 
         MOV     cx,100d
