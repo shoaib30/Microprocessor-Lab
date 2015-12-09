@@ -4,8 +4,8 @@ data segment
 sine        db      0,11,22,33,43,54,63,72,81,90,97,104,109,115,119
             db      122,125,126,127,126,122,119,115,109,104,97,90,81
             db      72,63,54,43,33,22,11,0
-PA          equ     22a0h
-CR          equ     22a3h
+PA          equ     20a0h
+CR          equ     20a3h
 data ends
 
 code segment
