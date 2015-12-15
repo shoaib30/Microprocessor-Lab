@@ -2,11 +2,7 @@
 ;30.9.15
 ;
 
-assume cs:code,ds:data
-
-data segment
-
-data ends
+assume cs:code
 
 code segment
 START:  MOV     ah,0
