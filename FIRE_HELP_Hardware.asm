@@ -5,7 +5,7 @@
 
 assume cs:code,ds:data
 data segment
-FIRE    db      71h,9fh,0f5h,61h        ;in reverse incase fire is displated ulta
+FIRE    db      71h,9fh,0f5h,61h        ;in reverse incase fire is displayed ulta
 HELP    db      0d1h,61h,0e3h,31h
 PA      EQU     20a0h
 PB      EQU     20a1h

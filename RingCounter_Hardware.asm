@@ -15,7 +15,7 @@ start:  MOV     ax,data
         OUT     dx,al
 
         MOV     al,01
-RPT:    MOV     dx,pa
+RPT:    MOV     dx,PA
         OUT     dx,al
         CALL    delay
         ROR     al,1
@@ -24,7 +24,7 @@ RPT:    MOV     dx,pa
         MOV     dl,0ffh
         INT     21h
         POP     ax
-        JZ      rpt
+        JZ      RPT
 
         MOV     ah,4ch
         INT     21h
