@@ -3,17 +3,12 @@
 ;14.10.15
 ;counter in the center of the screen
 
-assume cs:code,ds:data
-
-data segment
-
-data ends
+assume cs:code
 
 code segment
 START:  MOV     ah,0
         MOV     al,3    ;resolution of 80x25
         INT     10h     ;setting resolution (bios interrupt)
-        INT     10h
         MOV     cx,100d
         MOV     bl,00
 NXT:    MOV     al,bl
