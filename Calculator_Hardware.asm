@@ -40,12 +40,11 @@ NUM2:   CALL    INP
 
         CMP     OP,11d
         JE      AD
-SU:     MOV     al.NUM1
+SU:     MOV     al,NUM1
         SUB     al,NUM2
         JMP     PRIN
 AD:     MOV     al,NUM1
         ADD     al,NUM2
-        JMP     PRIN
 PRIN:   PUSH    ax
         MOV     dl,'='
         MOV     ah,2

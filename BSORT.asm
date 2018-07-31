@@ -32,8 +32,7 @@ DONOT:  INC     si
         CMP     ah,0
         JE      FINISH
         DEC     bx
-        CMP     bx,0
-        JNE     NEXT
+        JNZ     NEXT
 
 DISP:   LEA     si,x
         MOV     cx,n

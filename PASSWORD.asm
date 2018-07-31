@@ -40,7 +40,7 @@ RPT:	PUSH	cx
 		INT		21h
 
 ENTPWD	PROC	near
-		MOV		si,offset epwd
+		LEA		si,epwd
 		DISP	msg1
 		MOV		bl,0
 AGAIN:	MOV		ah,8
@@ -65,12 +65,10 @@ MATCH	PROC	near
 		LEA		si,pwd
 		LEA		di,epwd
 		CLD
-		;PUSH	cx
 		MOV		ch,0
 		MOV		cl,len1
 REP		CMPSB
 		JNZ		DNMAT
-		;POP		cx
 		DISP	msg2
 		MOV		ah,4ch
 		INT 	21h

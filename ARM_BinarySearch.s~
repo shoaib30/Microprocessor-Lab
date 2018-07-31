@@ -4,7 +4,7 @@ mov	r2,#9	;upper limit
 mov	r3,#1	;key to search
 
 loop:
-	cmp		r1,r2
+	cmp	r1,r2
 	ldrgt	r0,=notFound
 	swigt	0X02 	;printin wats in r0
 	swigt	0x11	;terminating the program
